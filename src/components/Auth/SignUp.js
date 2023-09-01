@@ -49,7 +49,7 @@ const SignUp = () => {
               className={cn('input', errors.email && 'bg-red-50')}
               id="email"
               name="email"
-              placeholder="jane@acme.com"
+              placeholder="haren.maha@gmail.com"
               type="email"
             />
             {errors.email && touched.email ? (
