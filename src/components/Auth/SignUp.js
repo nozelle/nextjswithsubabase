@@ -32,6 +32,8 @@ const SignUp = () => {
   }
 
   return (
+    <div>
+    <h1> NEXT JS WITH SUPABASE </h1>
     <div className="card">
       <h2 className="w-full text-center">Create Account</h2>
       <Formik
@@ -79,6 +81,7 @@ const SignUp = () => {
         Already have an account? Sign In.
       </Link>
     </div>
+        </div>
   );
 };
 
