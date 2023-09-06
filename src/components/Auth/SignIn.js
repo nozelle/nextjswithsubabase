@@ -32,7 +32,7 @@ const SignIn = () => {
 
   return (
     <div className=" flex min-h-screen flex-col items-center justify-center py-2">
-      <h2> NEXT JS WITH SUPABASE </h2>
+      <h2> NEXT JS WITH SUPABASE + TAILWIND Css </h2>
     <div className="card">
       <h2 className="w-full text-center">Sign In</h2>
       <Formik
