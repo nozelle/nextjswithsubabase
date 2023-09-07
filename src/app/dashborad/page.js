@@ -21,7 +21,10 @@ export default async function Profile() {
 
   return (
     <div>
+      <div className = 'ml-0'>
       <Navbar/>
+     </div>
+
       <CARDS />
       
       
