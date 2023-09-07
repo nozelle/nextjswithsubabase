@@ -4,8 +4,8 @@ import Link from 'next/link';
 //import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
 import 'src/styles/globals.css';
 import 'remixicon/fonts/remixicon.css';
-import { createPopper } from '@popperjs/core';
-import Chart from 'chart.js/auto';
+//import { createPopper } from '@popperjs/core';
+//import Chart from 'chart.js/auto';
 
 
 export default function App() {
@@ -13,23 +13,6 @@ export default function App() {
     <div>
     
          
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <div className ="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
         <button type="button" className ="text-lg text-gray-600 sidebar-toggle">
             <i className ="ri-menu-line"></i>
@@ -43,9 +26,7 @@ export default function App() {
         </ul>
         <ul className ="ml-auto flex items-center">
             <li className ="mr-1 dropdown">
-                <button type="button" className ="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-gray-600">
-                    <i className ="ri-search-line"></i>
-                </button>
+                
                 <div className ="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
                     <form action="" className ="p-4 border-b border-b-gray-100">
                         <div className ="relative w-full">
@@ -60,7 +41,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -69,7 +50,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -78,7 +59,7 @@ export default function App() {
                                 <a href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </a>
@@ -87,7 +68,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -96,7 +77,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -105,7 +86,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -114,7 +95,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -123,7 +104,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">xyxy</div>
                                         <div className ="text-[11px] text-gray-400">$345</div>
                                     </div>
                                 </Link>
@@ -143,24 +124,8 @@ export default function App() {
                     </div>
                     <div className ="my-2">
                         <ul className ="max-h-64 overflow-y-auto" data-tab-for="notification" data-page="notifications">
-                            <li>
-                                <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                    <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
-                                    <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                        <div className ="text-[11px] text-gray-400">from a user</div>
-                                    </div>
-                                </Link>
-                            </li>
-                            <li>
-                                <a href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                    <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
-                                    <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                        <div className ="text-[11px] text-gray-400">from a user</div>
-                                    </div>
-                                </a>
-                            </li>
+                            
+                            
                             <li>
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
@@ -230,7 +195,7 @@ export default function App() {
                                 <Link href="#" className ="py-2 px-4 flex items-center hover:bg-gray-50 group">
                                     <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded block object-cover align-middle"/>
                                     <div className ="ml-2">
-                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
+                                        <div className ="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Haren</div>
                                         <div className ="text-[11px] text-gray-400">Hello there!</div>
                                     </div>
                                 </Link>
@@ -324,7 +289,7 @@ export default function App() {
             <div className ="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                 <div className ="flex justify-between mb-6">
                     <div>
-                        <div className ="text-2xl font-semibold mb-1"><span className ="text-base font-normal text-gray-400 align-top">&dollar;</span>2,345</div>
+                        <div className ="text-2xl font-semibold mb-1"><span className ="text-base font-normal text-gray-400 align-top">$</span>2,345</div>
                         <div className ="text-sm font-medium text-gray-400">Active orders</div>
                     </div>
                     <div className ="dropdown">
@@ -384,7 +349,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -401,7 +366,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -418,7 +383,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxyxc</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -435,7 +400,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -452,7 +417,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -481,7 +446,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -498,7 +463,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -515,7 +480,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -532,7 +497,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -549,7 +514,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -578,7 +543,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -595,7 +560,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -612,7 +577,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -629,7 +594,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -646,7 +611,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link  href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link  href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -682,10 +647,7 @@ export default function App() {
                     </div>
                 </div>
                 <form action="" className ="flex items-center mb-4">
-                    <div className ="relative w-full mr-2">
-                        <input type="text" className ="py-2 pr-4 pl-10 bg-gray-50 w-full outline-none border border-gray-100 rounded-md text-sm focus:border-blue-500" placeholder="Search..."/>
-                        <i className ="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"></i>
-                    </div>
+                    
                     <select className ="text-sm py-2 pl-4 pr-10 bg-gray-50 border border-gray-100 rounded-md focus:border-blue-500 outline-none appearance-none bg-select-arrow bg-no-repeat bg-[length:16px_16px] bg-[right_16px_center]">
                         <option value="">All</option>
                     </select>
@@ -705,7 +667,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -735,7 +697,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -765,7 +727,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -795,7 +757,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -825,7 +787,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -934,7 +896,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -948,7 +910,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -962,7 +924,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</Link>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -976,7 +938,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -990,7 +952,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1004,7 +966,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1018,7 +980,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1032,7 +994,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1046,7 +1008,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1060,7 +1022,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">Create landing page</a>
+                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
