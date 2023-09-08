@@ -1,20 +1,72 @@
 'use client';
-import React from "react";
+import React, { useState } from 'react';
 import Link from 'next/link';
 //import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
 import 'src/styles/globals.css';
 import 'remixicon/fonts/remixicon.css';
+import BARCHART from 'src/components/barChart.jsx';
 //import { createPopper } from '@popperjs/core';
 //import Chart from 'chart.js/auto';
-
+//import SCROLL from 'src/components/scrollside';
 
 export default function App() {
+    
   return (
+  
     <div>
     
-         
+
+
+    <div className="fixed left-0  py-2 w-64 min-h-screen  bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
+        
+        <ul className="mt-4">
+            
+            <li className="mb-1 group">
+                <Link href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                    <i className="ri-instance-line mr-3 text-lg"></i>
+                    <span className="text-sm">Orders</span>
+                    <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                </Link>
+                <ul className="pl-7 mt-2 hidden group-[.selected]:block">
+                    <li className="mb-4">
+                        <Link href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</Link>
+                    </li> 
+                    <li className="mb-4">
+                    <Link href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed order</Link>
+                    </li> 
+                    <li className="mb-4">
+                    <Link href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled order</Link>
+                    </li> 
+                </ul>
+            </li>
+            <li className="mb-1 group">
+                <a href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                    <i className="ri-flashlight-line mr-3 text-lg"></i>
+                    <span className="text-sm">Services</span>
+                    <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                </a>
+                <ul className="pl-7 mt-2 hidden group-[.selected]:block">
+                    <li className="mb-4">
+                        <Link href="#" className="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Manage services</Link>
+                    </li>
+                </ul>
+            </li>
+            <li className="mb-1 group">
+                <Link href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i className="ri-settings-2-line mr-3 text-lg"></i>
+                    <span className="text-sm">Settings</span>
+                </Link>
+            </li>
+        </ul>
+    </div>
+    <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+   
+
+    <main className="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
     <div className ="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
-    
+    <button type="button" className="text-lg text-gray-600 sidebar-toggle">
+                <i className="ri-menu-line"></i>
+            </button>
         <ul className ="flex items-center text-sm ml-4">
             <li className ="mr-2">
                 <a href="#" className ="text-gray-400 hover:text-gray-600 font-medium">Dashboard</a>
@@ -799,13 +851,13 @@ export default function App() {
                                         <button type="button" className ="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i className ="ri-more-2-fill"></i></button>
                                         <ul className ="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
                                             <li>
-                                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
+                                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</Link>
                                             </li>
                                             <li>
-                                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
+                                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</Link>
                                             </li>
                                             <li>
-                                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -859,7 +911,7 @@ export default function App() {
                     </div>
                 </div>
                 <div>
-                    <canvas id="order-chart"></canvas>
+                   <BARCHART/>
                 </div>
             </div>
             <div className ="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
@@ -869,13 +921,13 @@ export default function App() {
                         <button type="button" className ="dropdown-toggle text-gray-400 hover:text-gray-600"><i className ="ri-more-fill"></i></button>
                         <ul className ="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
                             <li>
-                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
+                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</Link>
                             </li>
                             <li>
-                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
+                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</Link>
                             </li>
                             <li>
-                                <a href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                                <Link href="#" className ="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</Link>
                             </li>
                         </ul>
                     </div>
@@ -894,7 +946,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -908,7 +960,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -936,7 +988,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -950,7 +1002,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -964,7 +1016,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -978,7 +1030,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -992,7 +1044,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1006,7 +1058,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1020,7 +1072,7 @@ export default function App() {
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
                                     <div className ="flex items-center">
                                         <img src="https://placehold.co/32x32" alt="" className ="w-8 h-8 rounded object-cover block"/>
-                                        <a href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</a>
+                                        <Link href="#" className ="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">xyxy</Link>
                                     </div>
                                 </td>
                                 <td className ="py-2 px-4 border-b border-b-gray-50">
@@ -1035,8 +1087,11 @@ export default function App() {
                 </div>
             </div>
         </div>
+       
     </div>
-  
+ 
+    </main>
+    
 </div>
 
   );
