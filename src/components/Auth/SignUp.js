@@ -34,6 +34,9 @@ const SignUp = () => {
   return (
     <div className=" flex min-h-screen flex-col items-center justify-center py-2">
     <div className="card">
+    <h1 className="mb-12 text-5xl font-bold sm:text-6xl">
+              Next.js with <span className="font-black text-green-400">Supabase</span><span className="font-black text-primary-400">Tailwind</span>
+            </h1>
       <h2 className="w-full text-center">Create Account</h2>
       <Formik
         initialValues={{
