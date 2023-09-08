@@ -6,7 +6,7 @@ import SignOut from 'src/components/SignOut';
 
 export default function App() {
   return (
-    <Navbar className="bg-success-500" >
+    <Navbar  className="bg-success-500" >
       <NavbarBrand>
         <p className="font-bold text-inherit">ACME</p>
       </NavbarBrand>
