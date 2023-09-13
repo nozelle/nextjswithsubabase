@@ -1,40 +1,60 @@
 'use client';
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent,NavbarMenuToggle, NavbarItem, NavbarMenu,NavbarMenuItem,Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
 import SignOut from 'src/components/SignOut';
 
 
+
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
+
+
+
   return (
-    <Navbar  className="bg-success-500" >
-      <NavbarBrand>
-        <p className="font-bold text-inherit">ACME</p>
-      </NavbarBrand>
-     
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
-        <NavbarItem isActive>
+    <Navbar className="bg-success-500" onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+         
+          <p className="font-bold text-inherit">ACME</p>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
           <Link color="foreground" href="/">
-           HOME
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="/profile" >
-            PROFILE
+          <Link href="/profile"  >
+            Profile
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        <NavbarItem>
           <Link color="foreground" href="/dashborad">
-            DASHBORAD
+           Dashbord
           </Link>
         </NavbarItem>
       </NavbarContent>
-     <NavbarContent  justify="end">
-        
-            <NavbarItem >
-            <SignOut/> 
-            </NavbarItem>
-        </NavbarContent> 
-        <NavbarContent as="div" justify="end">
+      <NavbarContent >
+        <NavbarItem className="hidden lg:flex">
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
@@ -60,7 +80,30 @@ export default function App() {
             <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
           </DropdownMenu>
         </Dropdown>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link}  href="#" variant="flat">
+            <SignOut/>
+          </Button>
+        </NavbarItem>
+       
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+              }
+              className="w-full"
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }

@@ -5,24 +5,37 @@ import Link from 'next/link';
 import 'src/styles/globals.css';
 import 'remixicon/fonts/remixicon.css';
 import BARCHART from 'src/components/barChart.jsx';
+import {BsArrowLeft } from "react-icons/bs";
 //import { createPopper } from '@popperjs/core';
 //import Chart from 'chart.js/auto';
 //import SCROLL from 'src/components/scrollside';
+import {useTheme} from "next-themes";
+import { useEffect} from "react";
 
-export default function App() {
+const  App = () => {
+    const[open,setOpen] = useState(true);
+
+    const [mounted, setMounted] = useState(false)
+    const { theme, setTheme } = useTheme()
+  
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+  
+    if(!mounted) return null
     
   return (
   
-    <div>
-    
-
-
-    <div className="fixed left-0  py-2 w-64 min-h-screen  bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
-        
-        <ul className="mt-4">
+    <div className="flex ">
+ {/* sidbar */}
+    <div className= {` fixed left-0   ${open ? "w-64" : "w-0"} relative  min-h-screen text-white bg-gray-900 z-50 duration-300`}>
+        {/* <BsArrowLeft className="bg-white text-dark-purple rounded-full absolute -right-3 top-9 border border-dark-purple cursor-pointer" onClick={() => setOpen(!open)}/>
+     */}
+     <div className ={` ${!open && "scale-0"}`} >
+       <ul className="mt-4">
             
             <li className="mb-1 group">
-                <Link href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                <Link href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 ">
                     <i className="ri-instance-line mr-3 text-lg"></i>
                     <span className="text-sm">Orders</span>
                     <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
@@ -57,14 +70,26 @@ export default function App() {
                     <span className="text-sm">Settings</span>
                 </Link>
             </li>
+            <li className="mb-1 group">
+                <Link href="#" onClick={() => setTheme('dark')} className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i className="ri-moon-fill mr-3 text-lg"></i>
+                    <span className="text-sm">Dark mode</span>
+                </Link>
+            </li>
+            <li className="mb-1 group">
+                <Link href="#" onClick={() => setTheme('light')} className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i className="ri-moon-line mr-3 text-lg"></i>
+                    <span className="text-sm">light mode</span>
+                </Link>
+            </li>
         </ul>
-    </div>
-    <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
-   
+        </div>
+ </div>
 
-    <main className="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
-    <div className ="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30 ">
-    <button type="button" className="text-lg text-gray-600 sidebar-toggle">
+
+    <div className="p-4">
+    <div className =" bg-white items-center flex shadow-md shadow-black/5 ">
+    <button type="button" className="text-lg text-gray-600 cursor-pointer"onClick={() => setOpen(!open)}>
                 <i className="ri-menu-line"></i>
             </button>
         <ul className ="flex items-center text-sm ml-4 ">
@@ -273,9 +298,9 @@ export default function App() {
         </ul>
     </div>
     <div className ="p-6">
-        <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            <div className ="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
-                <div className ="flex justify-between mb-6">
+        <div className ="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 sm:max-md:grid-col-1 gap-6 mb-6">
+            <div className ="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/10">
+                <div className ="flex justify-between sm mb-6">
                     <div>
                         <div className ="text-2xl font-semibold mb-1">10</div>
                         <div className ="text-sm font-medium text-gray-400">Active orders</div>
@@ -304,7 +329,7 @@ export default function App() {
                     <span className ="text-sm font-medium text-gray-600 ml-4">60%</span>
                 </div>
             </div>
-            <div className ="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
+            <div className ="bg-white rounded-md border bg-slate-600 border-gray-100 p-6 shadow-md shadow-black/5">
                 <div className ="flex justify-between mb-4">
                     <div>
                         <div className ="flex items-center mb-1">
@@ -1090,9 +1115,11 @@ export default function App() {
        
     </div>
  
-    </main>
+    </div>
     
+
 </div>
 
   );
 }
+export default App;
