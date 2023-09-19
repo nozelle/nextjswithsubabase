@@ -6,6 +6,7 @@ import React from 'react';
 
 import SignOut from 'src/components/SignOut';
 import Navbar from 'src/components/navbar';
+import TEST from 'src/components/testhome';
 
 export default async function Profile() {
   const supabase = createServerComponentClient({ cookies });
@@ -17,12 +18,16 @@ export default async function Profile() {
   if (!user) {
     redirect('/sign-in');
   }
-   
+
+ 
+
+
   return (
    <div>
     <Navbar/>
+    
     <div className="card">
-       
+  <TEST/>
       <h2>User Profile</h2>
       <code className="highlight">{user.email}</code>
       <div className="heading">Last Signed In:</div>
@@ -33,10 +38,10 @@ export default async function Profile() {
       <Link className="button" href="/dashborad">
         dashborad
       </Link>
+  
       <SignOut />
       </div>
       </div>
 
   );
-
-}
+ }

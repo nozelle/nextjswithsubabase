@@ -5,7 +5,7 @@ import SignOut from 'src/components/SignOut';
 
 
 
-export default function App() {
+export default function App({username,last_name}) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -70,7 +70,7 @@ export default function App() {
           <DropdownMenu aria-label="Profile Actions" variant="flat">
             <DropdownItem key="profile" className="h-14 gap-2">
               <p className="font-semibold">Signed in as</p>
-              <p className="font-semibold">user</p>
+              <p className="font-semibold">{username}.{last_name}</p>
             </DropdownItem>
             <DropdownItem key="settings">My Settings</DropdownItem>
             <DropdownItem key="team_settings">Team Settings</DropdownItem>

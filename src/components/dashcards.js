@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState , useEffect, useCallback} from 'react';
 import Link from 'next/link';
 //import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
 import 'src/styles/globals.css';
@@ -10,19 +10,27 @@ import {BsArrowLeft } from "react-icons/bs";
 //import Chart from 'chart.js/auto';
 //import SCROLL from 'src/components/scrollside';
 import {useTheme} from "next-themes";
-import { useEffect} from "react";
 
-const  App = () => {
+        
+
+
+const  App = ({activeorder,vist}) => {
+   
+    
     const[open,setOpen] = useState(true);
-
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
-  
     useEffect(() => {
       setMounted(true)
     }, [])
   
     if(!mounted) return null
+
+
+
+
+
+    
     
   return (
   
@@ -37,7 +45,7 @@ const  App = () => {
             <li className="mb-1 group">
                 <Link href="#" className="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 ">
                     <i className="ri-instance-line mr-3 text-lg"></i>
-                    <span className="text-sm">Orders</span>
+                    <span className="text-sm" >order</span>
                     <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
                 </Link>
                 <ul className="pl-7 mt-2 hidden group-[.selected]:block">
@@ -302,7 +310,7 @@ const  App = () => {
             <div className ="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/10">
                 <div className ="flex justify-between sm mb-6">
                     <div>
-                        <div className ="text-2xl font-semibold mb-1">10</div>
+                        <div className ="text-2xl font-semibold mb-1">{vist}</div>
                         <div className ="text-sm font-medium text-gray-400">Active orders</div>
                     </div>
                     <div className ="dropdown">
@@ -326,14 +334,19 @@ const  App = () => {
                             <div className ="w-2 h-2 rounded-full bg-white ml-auto"></div>
                         </div>
                     </div>
-                    <span className ="text-sm font-medium text-gray-600 ml-4">60%</span>
+                    <span className ="text-sm font-medium text-gray-600 ml-4">70%</span>
                 </div>
             </div>
             <div className ="bg-white rounded-md border bg-slate-600 border-gray-100 p-6 shadow-md shadow-black/5">
                 <div className ="flex justify-between mb-4">
                     <div>
                         <div className ="flex items-center mb-1">
-                            <div className ="text-2xl font-semibold">324</div>
+                            <div className ="text-2xl font-semibold">
+                            
+                             <div>
+                         <p>{activeorder}</p>
+                             </div>
+                            </div>
                             <div className ="p-1 rounded bg-emerald-500/10 text-emerald-500 text-[12px] font-semibold leading-none ml-2">+30%</div>
                         </div>
                         <div className ="text-sm font-medium text-gray-400">Visitors</div>

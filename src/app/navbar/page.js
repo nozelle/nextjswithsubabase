@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import React from 'react';
 
-import SignOut from 'src/components/navbar';
+import  NAVBAR from 'src/components/navbar';
 
 export default async function Profile() {
   const supabase = createServerComponentClient({ cookies });
@@ -17,6 +17,6 @@ export default async function Profile() {
     redirect('/sign-in');
   }
 
-  return <SignOut/>
+  return <NAVBAR/>
     
 }
